@@ -163,7 +163,7 @@ const IndexPage = ({ data }) => {
       // slideImages={homeBannerData}
       scrollDownGif
     >
-      <h1> hello</h1>
+      <h1 className="text-sky-400"> hello</h1>
     </Layout>
   )
 }

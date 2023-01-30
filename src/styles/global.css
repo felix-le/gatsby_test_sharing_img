@@ -1,6 +1,6 @@
 @tailwind base;
-/* @layer base {
-  @import url('./base.css');
+@layer base {
+  @import url("./base.css");
   html {
     font-size: 10px;
     scroll-behavior: smooth;
@@ -34,7 +34,7 @@
   section {
     @apply relative h-full py-[120px];
   }
-} */
+}
 
 @tailwind components;
 @tailwind utilities;
