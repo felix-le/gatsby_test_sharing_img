@@ -21,105 +21,140 @@ module.exports = {
     },
   },
   plugins: [
-    `gatsby-plugin-image`,
+    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-postcss",
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: "gatsby-source-strapi",
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
+        apiURL: "http://172.105.4.133:1337",
+        accessToken:
+          "90c49be52a27d0428665239902914280975a5ac7c35fe55e2e091580d3b0d97ac743930aa813cfcce4c5ea70d028e5b192400b64d8d000d54ef3438e11e18b1e7778768cec5defa58a44a8f710f78322160ec80235c2b734261fdb7eb7d323e9a58744fc222106612b0d09c4a09e36d48060c78968625689d6f2f781fd9fb3f1",
+        collectionTypes: [
+          // List of the Content Types you want to be able to request from Gatsby.
+          "article",
+          "career",
+          "testimonial",
+          // {
+          //   singularName: "article",
+          //   queryParams: {
+          //     publicationState:
+          //       process.env.GATSBY_IS_PREVIEW === "true" ? "preview" : "live",
+          //     populate: {
+          //       cover: "*",
+          //       blocks: {
+          //         populate: "*",
+          //       },
+          //     },
+          //   },
+          // },
+          // {
+          //   singularName: "author",
+          // },
+        ],
+        singleTypes: [
           {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 630,
+            singularName: "about",
+            queryParams: {
+              populate: {
+                blocks: {
+                  populate: "*",
+                },
+              },
             },
           },
           {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
+            singularName: "global",
+            queryParams: {
+              populate: {
+                favicon: "*",
+                blocks: {
+                  populate: "*",
+                },
+              },
             },
           },
-          `gatsby-remark-prismjs`,
         ],
       },
+    },
+    // old plugins
+    `gatsby-plugin-image`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-transformer-remark`,
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-feed`,
-      options: {
-        query: `
-          {
-            site {
-              siteMetadata {
-                title
-                description
-                siteUrl
-                site_url: siteUrl
-              }
-            }
-          }
-        `,
-        feeds: [
-          {
-            serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
-                return Object.assign({}, node.frontmatter, {
-                  description: node.excerpt,
-                  date: node.frontmatter.date,
-                  url: site.siteMetadata.siteUrl + node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
-            },
-            query: `{
-              allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
-                nodes {
-                  excerpt
-                  html
-                  fields {
-                    slug
-                  }
-                  frontmatter {
-                    title
-                    date
-                  }
-                }
-              }
-            }`,
-            output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed",
-          },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-feed`,
+    //   options: {
+    //     query: `
+    //       {
+    //         site {
+    //           siteMetadata {
+    //             title
+    //             description
+    //             siteUrl
+    //             site_url: siteUrl
+    //           }
+    //         }
+    //       }
+    //     `,
+    //     feeds: [
+    //       {
+    //         serialize: ({ query: { site, allMarkdownRemark } }) => {
+    //           return allMarkdownRemark.nodes.map(node => {
+    //             return Object.assign({}, node.frontmatter, {
+    //               description: node.excerpt,
+    //               date: node.frontmatter.date,
+    //               url: site.siteMetadata.siteUrl + node.fields.slug,
+    //               guid: site.siteMetadata.siteUrl + node.fields.slug,
+    //               custom_elements: [{ "content:encoded": node.html }],
+    //             })
+    //           })
+    //         },
+    //         query: `{
+    //           allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
+    //             nodes {
+    //               excerpt
+    //               html
+    //               fields {
+    //                 slug
+    //               }
+    //               frontmatter {
+    //                 title
+    //                 date
+    //               }
+    //             }
+    //           }
+    //         }`,
+    //         output: "/rss.xml",
+    //         title: "Gatsby Starter Blog RSS Feed",
+    //       },
+    //     ],
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Gatsby Starter Blog`,
+    //     short_name: `Gatsby`,
+    //     start_url: `/`,
+    //     background_color: `#ffffff`,
+    //     // This will impact how browsers show your PWA/website
+    //     // https://css-tricks.com/meta-theme-color-and-trickery/
+    //     // theme_color: `#663399`,
+    //     display: `minimal-ui`,
+    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+    //   },
+    // },
   ],
 }
