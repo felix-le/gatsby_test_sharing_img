@@ -171,6 +171,23 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const Head = ({ data }) => {
+  const jobs = data.allStrapiCareer.edges
+    .map(({ node }) => node)
+    .map(job => {
+      const newJobFormat = {
+        id: job.id,
+        subTitle: job.job_subtitle,
+        duties: job.job_description,
+        name: job.job_title,
+        typeJob: "position.",
+        link: `/careers/${job.slug}`,
+        images: job.images.map(
+          image => image.localFile.childImageSharp.original.src
+        ),
+      }
+      return newJobFormat
+    })
+  const testImg = jobs[0].images[0]
   const siteMetaData = data.allStrapiGlobal.edges.map(({ node }) => node)
 
   const { siteDescription } = siteMetaData[0]
@@ -179,6 +196,7 @@ export const Head = ({ data }) => {
       metaTitle="Design, Web Development & Branding "
       metaDescription={siteDescription}
       isBlogPost
+      shareImg={`https://sharingtitle.netlify.app${testImg}`}
     />
   )
 }
@@ -195,9 +213,19 @@ export const query = graphql`
         node {
           siteName
           siteDescription
-          favicon {
+        }
+      }
+    }
+    allStrapiCareer {
+      edges {
+        node {
+          images {
             localFile {
-              url
+              childImageSharp {
+                original {
+                  src
+                }
+              }
             }
           }
         }

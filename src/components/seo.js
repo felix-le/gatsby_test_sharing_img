@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import ShareImage from "../images/shareImage.jpeg"
+import ShareLocalImage from "../images/shareImage.jpeg"
 
 import favioIcon from "../images/favicon.ico"
 
@@ -20,12 +20,12 @@ const Seo = ({
       }
     }
   `)
-
+  console.log(shareImg)
   const defaultSeo = {
     metaTitle: "Element 6",
     metaDescription:
       "Element 6 is a website design, web development & social media marketing agency in Barrie. We help brands create better user experiences.",
-    shareImage: ShareImage,
+    shareImage: ShareLocalImage,
     metaKeywords:
       "Website, web design, web development, social media, branding, marketing, graphic design, marketing agency, blogs, blogging, SEO, ecommerce ",
   }
@@ -87,7 +87,6 @@ const Seo = ({
           name: "image",
           content: imageUrl,
         },
-
         {
           property: "og:image",
           content: imageUrl,
@@ -116,7 +115,7 @@ const Seo = ({
 
     return tags
   }
-  const url = "https://element6.io"
+  const url = "https://sharingtitle.netlify.app/"
 
   const metaTags = [
     {
