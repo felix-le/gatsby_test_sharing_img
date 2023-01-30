@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'FunctionPro-Light';
+  src: url('./font/FunctionPro-Light-webfont.woff2') format('woff2'),
+    url('./font/FunctionPro-Light-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'FunctionPro-Medium';
+  src: url('./font/FunctionPro-Medium-webfont.woff2') format('woff2'),
+    url('./font/FunctionPro-Medium-webfont.woff') format('woff');
+}
+@font-face {
+  font-family: 'FunctionPro-Demi';
+  src: url('./font/FunctionPro-Demi-webfont.woff2') format('woff2'),
+    url('./font/FunctionPro-Demi-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FunctionPro-DemiOblique';
+  src: url('./font/FunctionPro-DemiOblique-webfont.woff2') format('woff2'),
+    url('./font/FunctionPro-DemiOblique-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
