@@ -1,8 +1,8 @@
 import React from "react"
-// import Footer from "./footer"
-// import Navbar from "./navbar"
-// import SlideBanner from "./slideBanner"
-// import SingleBanner from "./singleBanner"
+import Footer from "./footer"
+import Navbar from "./navbar"
+import SlideBanner from "./slideBanner"
+import SingleBanner from "./singleBanner"
 
 const Layout = ({
   children,
@@ -13,18 +13,17 @@ const Layout = ({
 }) => {
   return (
     <>
-      {/* <Navbar /> */}
-      {/* {!!slideImages && (
+      <Navbar />
+      {!!slideImages && (
         <SlideBanner
           scrollDownGif={scrollDownGif}
           slideImages={slideImages}
           herobannerImage={herobannerImage}
         />
-      )} */}
-
-      {/* {!!singleImage && <SingleBanner singleImage={singleImage} />} */}
+      )}{" "}
+      {!!singleImage && <SingleBanner singleImage={singleImage} />}
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }

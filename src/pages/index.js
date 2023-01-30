@@ -33,128 +33,128 @@ import banac1Artboard2 from "../images/portfolio/banac-1Artboard-2.jpg"
 import banac1Artboard3 from "../images/portfolio/banac-1Artboard-3.jpg"
 
 // components
-// import Section from "../elements/section"
-// import Mapbox from "../components/Mapbox"
+import Section from "../elements/section"
+import Mapbox from "../components/Mapbox"
 
-// import TwoCol from "../components/animation/twoCol"
-// import Testimonationals from "../components/testimonationals"
-// import Branding from "../components/animation/branding"
-// import OurTeam from "../components/animation/ourTeam"
-// import Counter from "../components/animation/counter"
+import TwoCol from "../components/animation/twoCol"
+import Testimonationals from "../components/testimonationals"
+import Branding from "../components/animation/branding"
+import OurTeam from "../components/animation/ourTeam"
+import Counter from "../components/animation/counter"
 
-// import Project from "../components/projects/project"
-// import Clients from "../components/clients"
-// import Seperate from "../components/seperate"
-// import Articles from "../components/articles"
+import Project from "../components/projects/project"
+import Clients from "../components/clients"
+import Seperate from "../components/seperate"
+import Articles from "../components/articles"
 
 // SVG
-// import SvgOne from "../images/SvgOne"
-// import SvgTwo from "../images/SvgTwo"
-// import SvgThree from "../images/SvgThree"
-// import SvgFour from "../images/SvgFour"
+import SvgOne from "../images/SvgOne"
+import SvgTwo from "../images/SvgTwo"
+import SvgThree from "../images/SvgThree"
+import SvgFour from "../images/SvgFour"
 // data
-// const homeBannerData = [
-//   {
-//     id: 1,
-//     title: `helping local brands <br/> create better experiences`,
-//   },
-//   {
-//     id: 2,
-//     title: "fuelled by strategy <br/> focused on results",
-//   },
-//   {
-//     id: 3,
-//     title: "connecting people <br/> with products they love",
-//   },
-// ]
+const homeBannerData = [
+  {
+    id: 1,
+    title: `helping local brands <br/> create better experiences`,
+  },
+  {
+    id: 2,
+    title: "fuelled by strategy <br/> focused on results",
+  },
+  {
+    id: 3,
+    title: "connecting people <br/> with products they love",
+  },
+]
 
-// const aboutUsData = [
-//   {
-//     id: 1,
-//     svg: <SvgOne />,
-//     title: 'branding & identity',
-//     desc: 'For new start-up companies or established companies we will build a strong brand that will connect you and develop strong relationships with your customer.',
-//   },
-//   {
-//     id: 2,
-//     svg: <SvgTwo />,
-//     title: 'user experience',
-//     desc: 'A user friendly responsive website is essential to creating a successful brand experience, we will create a website that is forward thinking and aligns with your audience.',
-//   },
-//   {
-//     id: 3,
-//     svg: <SvgThree />,
-//     title: 'web design & development',
-//     desc: 'A professionally designed website that is fast, secure, mobile friendly & high performing is essential to building your online presence. ',
-//   },
-//   {
-//     id: 4,
-//     svg: <SvgFour />,
-//     title: 'social media strategy',
-//     desc: 'Connecting socially with your audience on a variety of platforms helps promote your business while increasing leads & a loyal customer base.',
-//   },
-// ];
+const aboutUsData = [
+  {
+    id: 1,
+    svg: <SvgOne />,
+    title: "branding & identity",
+    desc: "For new start-up companies or established companies we will build a strong brand that will connect you and develop strong relationships with your customer.",
+  },
+  {
+    id: 2,
+    svg: <SvgTwo />,
+    title: "user experience",
+    desc: "A user friendly responsive website is essential to creating a successful brand experience, we will create a website that is forward thinking and aligns with your audience.",
+  },
+  {
+    id: 3,
+    svg: <SvgThree />,
+    title: "web design & development",
+    desc: "A professionally designed website that is fast, secure, mobile friendly & high performing is essential to building your online presence. ",
+  },
+  {
+    id: 4,
+    svg: <SvgFour />,
+    title: "social media strategy",
+    desc: "Connecting socially with your audience on a variety of platforms helps promote your business while increasing leads & a loyal customer base.",
+  },
+]
 
-// const projectData = [
-//   {
-//     id: 1,
-//     images: [
-//       marathonFinancial1Src,
-//       marathonFinancial2Src,
-//       marathonFinancial3Src,
-//     ],
+const projectData = [
+  {
+    id: 1,
+    images: [
+      marathonFinancial1Src,
+      marathonFinancial2Src,
+      marathonFinancial3Src,
+    ],
 
-//     typeJob: 'branding.',
-//     name: 'Marathon Mortgage Corp.',
-//     duties: 'creative direction, content creation, identity, react js',
-//     authors:
-//       'Clive Moore, Anthony Mika, Carole Wright, Dan Zaina, Matt Quinton, Ryan Moreau',
-//   },
-//   {
-//     id: 2,
-//     images: [localLeaf1, localLeaf2, localLeaf3],
-//     typeJob: 'website. ',
-//     name: 'My Local Leaf',
-//     duties: 'creative direction, content creation, graphic design, css',
-//     authors: 'clive moore, carole wright, ryan moreau',
-//     isTextFirst: true,
-//   },
-//   {
-//     id: 4,
-//     images: [jjautomotive1, jjautomotive2, jjautomotive3],
-//     typeJob: 'social media. ',
-//     name: 'JJ Automotive Insight',
-//     duties: 'creative direction, content creation, web design, react js',
-//     authors: 'Clive Moore, Carole Wright, Dan Zaina, Ryan Moreau',
-//     isTextFirst: true,
-//   },
+    typeJob: "branding.",
+    name: "Marathon Mortgage Corp.",
+    duties: "creative direction, content creation, identity, react js",
+    authors:
+      "Clive Moore, Anthony Mika, Carole Wright, Dan Zaina, Matt Quinton, Ryan Moreau",
+  },
+  {
+    id: 2,
+    images: [localLeaf1, localLeaf2, localLeaf3],
+    typeJob: "website. ",
+    name: "My Local Leaf",
+    duties: "creative direction, content creation, graphic design, css",
+    authors: "clive moore, carole wright, ryan moreau",
+    isTextFirst: true,
+  },
+  {
+    id: 4,
+    images: [jjautomotive1, jjautomotive2, jjautomotive3],
+    typeJob: "social media. ",
+    name: "JJ Automotive Insight",
+    duties: "creative direction, content creation, web design, react js",
+    authors: "Clive Moore, Carole Wright, Dan Zaina, Ryan Moreau",
+    isTextFirst: true,
+  },
 
-//   {
-//     id: 6,
-//     images: [pacePortfolioThumb1, pacePortfolioThumb2, pacePortfolioThumb3],
-//     typeJob: 'website. ',
-//     name: 'PACE Cardiology',
-//     duties: 'creative direction, content creation, web design, css',
-//     authors: 'clive moore, carole wright, dan zaina, felix le',
-//   },
-//   {
-//     id: 7,
-//     images: [laforet1Artboard1, laforet1Artboard2, laforet1Artboard3],
-//     typeJob: 'website. ',
-//     name: 'Laforet Catering',
-//     duties: 'creative direction, content creation, web design, css',
-//     authors: 'clive moore, carole wright, dan zaina, felix le',
-//   },
+  {
+    id: 6,
+    images: [pacePortfolioThumb1, pacePortfolioThumb2, pacePortfolioThumb3],
+    typeJob: "website. ",
+    name: "PACE Cardiology",
+    duties: "creative direction, content creation, web design, css",
+    authors: "clive moore, carole wright, dan zaina, felix le",
+  },
+  {
+    id: 7,
+    images: [laforet1Artboard1, laforet1Artboard2, laforet1Artboard3],
+    typeJob: "website. ",
+    name: "Laforet Catering",
+    duties: "creative direction, content creation, web design, css",
+    authors: "clive moore, carole wright, dan zaina, felix le",
+  },
 
-//   {
-//     id: 8,
-//     images: [banac1Artboard1, banac1Artboard2, banac1Artboard3],
-//     typeJob: 'website. ',
-//     name: 'Barrie Area Native Advisory Circle.',
-//     duties: 'creative direction, content creation, web design, css',
-//     authors: 'clive moore, carole wright, dan zaina',
-//   },
-// ];
+  {
+    id: 8,
+    images: [banac1Artboard1, banac1Artboard2, banac1Artboard3],
+    typeJob: "website. ",
+    name: "Barrie Area Native Advisory Circle.",
+    duties: "creative direction, content creation, web design, css",
+    authors: "clive moore, carole wright, dan zaina",
+  },
+]
 
 const IndexPage = ({ data }) => {
   return (
@@ -171,33 +171,29 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const Head = ({ data }) => {
-  const jobs = data.allStrapiCareer.edges
-    .map(({ node }) => node)
-    .map(job => {
-      const newJobFormat = {
-        id: job.id,
-        subTitle: job.job_subtitle,
-        duties: job.job_description,
-        name: job.job_title,
-        typeJob: "position.",
-        link: `/careers/${job.slug}`,
-        images: job.images.map(
-          image => image.localFile.childImageSharp.original.src
-        ),
-      }
-      return newJobFormat
-    })
-  const testImg = jobs[0].images[0]
   const siteMetaData = data.allStrapiGlobal.edges.map(({ node }) => node)
 
   const { siteDescription } = siteMetaData[0]
   return (
-    <Seo
-      metaTitle="Design, Web Development & Branding "
-      metaDescription={siteDescription}
-      isBlogPost
-      shareImg={`https://sharingtitle.netlify.app${testImg}`}
-    />
+    <>
+      <Seo
+        metaTitle="Design, Web Development & Branding "
+        metaDescription={siteDescription}
+        isBlogPost
+        // shareImg={`https://sharingtitle.netlify.app${testImg}`}
+      />
+
+      <Section
+        point="a. "
+        outline="about us"
+        title="We help businesses and startups turn ideas and passion into compelling brands that connect with their audiences needs and desires."
+        addClassSectionHeading="heading-left"
+        isHeading
+        sectionName="about"
+      >
+        <TwoCol data={aboutUsData} />
+      </Section>
+    </>
   )
 }
 /**
@@ -213,21 +209,6 @@ export const query = graphql`
         node {
           siteName
           siteDescription
-        }
-      }
-    }
-    allStrapiCareer {
-      edges {
-        node {
-          images {
-            localFile {
-              childImageSharp {
-                original {
-                  src
-                }
-              }
-            }
-          }
         }
       }
     }

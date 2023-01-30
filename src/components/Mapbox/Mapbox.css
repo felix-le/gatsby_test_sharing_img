@@ -1,0 +1,7 @@
+.mapboxgl-map {
+  max-height: 500px !important;
+  height: 500px !important;
+}
+.mapboxgl-canvas {
+  height: 500px !important;
+}
